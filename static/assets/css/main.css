@@ -4,6 +4,7 @@
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12009,7 +12010,24 @@ textarea.form-control-lg {
   content: "\e901";
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, a, ul, li, figure, img, video, b, strong, small, .small, button {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+a,
+ul,
+li,
+figure,
+img,
+video,
+b,
+strong,
+small,
+.small,
+button {
   margin: 0;
   padding: 0;
 }
@@ -12030,6 +12048,7 @@ a {
 body {
   overflow: hidden;
   overflow-y: auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 .d_flex_between {
@@ -12043,12 +12062,26 @@ body {
   align-items: center;
 }
 
+.section_space {
+  margin-bottom: 7rem;
+}
+
+.nav_animation i {
+  display: inline-block;
+  transition: all ease-in-out 0.3s;
+}
+.nav_animation:hover i {
+  transform: rotate(180deg);
+  transform: scale(1.2);
+}
+
 .theme_btn {
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 2rem;
-  padding: 0.7rem 1.75rem;
-  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
 }
 
 .secondary_theme_button {
@@ -12064,14 +12097,11 @@ section.main_hero_section {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-section.main_hero_section figure {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-}
-section.main_hero_section figure video {
+section.main_hero_section video {
   position: absolute;
   top: 0;
   left: 0;
@@ -12081,7 +12111,7 @@ section.main_hero_section figure video {
      object-fit: cover;
   z-index: 2;
 }
-section.main_hero_section figure:after {
+section.main_hero_section:after {
   content: "";
   position: absolute;
   top: 0;
@@ -12091,12 +12121,31 @@ section.main_hero_section figure:after {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
+section.main_hero_section figcaption {
+  z-index: 4;
+  color: white;
+}
+section.main_hero_section figcaption h1, section.main_hero_section figcaption .h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 5rem);
+  color: white;
+  font-weight: 700;
+}
+section.main_hero_section figcaption h1 span, section.main_hero_section figcaption .h1 span {
+  padding-bottom: 1.2rem;
+  display: block;
+  color: #ebd7b2;
+  font-size: clamp(1rem, 2vw, 1rem);
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+}
 section.main_hero_section .header {
   width: 100%;
   position: absolute;
   top: 1rem;
   left: 0;
-  z-index: 4;
+  z-index: 5;
 }
 section.main_hero_section .header .header-inner .site_logo {
   height: 3.5rem;
@@ -12112,13 +12161,34 @@ section.main_hero_section .header .header-inner .links .btn-close {
   --bs-btn-close-bg: none;
   border: none;
 }
+section.main_hero_section .header .header-inner .links .btn-close i {
+  font-size: 1.5rem;
+  color: black;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
 section.main_hero_section .header .header-inner .links .btn-close:focus {
   outline: none;
   box-shadow: none;
+}
+section.main_hero_section .header .header-inner .links .btn-close:hover i {
+  transform: rotate(90deg);
+}
+
+.offcanvas .offcanvas-header {
+  background-color: #faf8f5;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1100px) {
   .lg-hide {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  section.main_hero_section {
+    min-height: 90vh;
   }
 }/*# sourceMappingURL=main.css.map */

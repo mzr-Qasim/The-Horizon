@@ -1,51 +1,87 @@
 $white_color: #ffff;
-$secondary_theme_button_bg: rgb(151, 134, 103);;
+$secondary_theme_button_bg: rgb(151, 134, 103);
+;
 $secondary_theme_button_bg_hover: rgb(75, 81, 77);
 
 
 
-h1, h2, h3, h4, a, ul, li, figure, img, video, b, strong, small, button{
+h1,
+h2,
+h3,
+h4,
+a,
+ul,
+li,
+figure,
+img,
+video,
+b,
+strong,
+small,
+button {
     margin: 0;
     padding: 0;
 }
 
-button{
+button {
     border: none;
     background: transparent;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 
-body{
+body {
     overflow: hidden;
     overflow-y: auto;
+    font-family: "Montserrat", sans-serif;
 }
 
-.d_flex_between{
+.d_flex_between {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.d_flex_center{
+.d_flex_center {
     display: flex;
     align-items: center;
 }
 
+.section_space{
+    margin-bottom: 7rem;
+}
 
-.theme_btn{
-    display: flex;
-    align-items: center;
+
+.nav_animation {
+    i {
+        display: inline-block;
+        transition: all ease-in-out .3s;
+        
+    }
+
+    &:hover {
+        i {
+            transform: rotate(180deg);
+            transform: scale(1.2); 
+        }
+    }
+}
+
+
+
+.theme_btn {
+    display: inline-block;
+    width: fit-content;
     border-radius: 2rem;
-    padding: .7rem 1.75rem;
-    font-weight: 500;
+    padding: .6rem 1.5rem;
+    font-weight: 600;
 }
 
 
@@ -57,12 +93,12 @@ body{
 
 
 
-.secondary_theme_button{
+.secondary_theme_button {
     background-color: $secondary_theme_button_bg;
     color: $white_color;
     transition: all ease-in-out .3s;
 
-    &:hover{
+    &:hover {
         background-color: $secondary_theme_button_bg_hover;
     }
 }

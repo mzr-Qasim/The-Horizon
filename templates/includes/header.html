@@ -2,20 +2,24 @@
 <header class="header">
     <div class="container">
         <div class="header-inner d_flex_between">
-            <a href=""><img class="site_logo" src="{% static './assets/images/main-logo.svg' %}" alt=""></a>
+            <a href="{% url 'home' %}"><img class="site_logo" src="{% static './assets/images/main-logo.svg' %}" alt=""></a>
             <div class="links d_flex_center">
                 <a href="" class="lg-hide theme_btn secondary_theme_button">Book Now</a>
-                <button class="nav_btn" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="icon-hamburger"></i></button>
+                <button class="nav_btn nav_animation" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                        class="icon-hamburger"></i></button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                     aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header">
-                        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
                         <button type="button" class="btn-close text-reset navbar_close_btn" data-bs-dismiss="offcanvas"
                             aria-label="Close"><i class="icon-hamburger_close"></i></button>
+                        <div class="navbar-logo py-3" id="offcanvasRightLabel">
+                            <img class="site_logo" id="offcanvasRightLabel"
+                                src="{% static './assets/images/nav-logo.svg' %}" alt="">
+                        </div><!-- /.navbar-logo -->
                     </div>
                     <div class="offcanvas-body">
-                        ...
+
                     </div>
                 </div>
             </div><!-- /.links -->

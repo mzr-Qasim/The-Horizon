@@ -4,14 +4,16 @@
 {% block title %}Home | The Horizon{% endblock %}
 
 {% block content %}
-<section class="main_hero_section">
-            {% include 'includes/header.html' %}
-        <figure>
-            <video autoplay muted loop playsinline>
-                <source src="{% static 'assets/videos/main_hero.mp4' %}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <figcaption></figcaption>
-        </figure>
+<section class="main_hero_section section_space">
+    {% include 'includes/header.html' %}
+    <video autoplay muted loop playsinline>
+        <source src="{% static 'assets/videos/main_hero.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <figcaption>
+            <div class="container">
+                <h1><span>luxury hotel experience</span>a unique experience<br>where to stay</h1>
+    </div><!-- /.container -->
+    </figcaption>
 </section><!-- /.main_hero_section -->
 {% endblock %}

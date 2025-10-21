@@ -1,5 +1,12 @@
-@media(max-width: 1100px){
-    .lg-hide{
+@media(max-width: 1100px) {
+    .lg-hide {
         display: none;
+    }
+}
+
+
+@media(max-width: 768px) {
+    section.main_hero_section {
+        min-height: 90vh;
     }
 }
