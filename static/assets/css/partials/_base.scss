@@ -1,0 +1,68 @@
+$white_color: #ffff;
+$secondary_theme_button_bg: rgb(151, 134, 103);;
+$secondary_theme_button_bg_hover: rgb(75, 81, 77);
+
+
+
+h1, h2, h3, h4, a, ul, li, figure, img, video, b, strong, small, button{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    background: transparent;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.d_flex_between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d_flex_center{
+    display: flex;
+    align-items: center;
+}
+
+
+.theme_btn{
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    padding: .7rem 1.75rem;
+    font-weight: 500;
+}
+
+
+
+// .main_theme_button_{
+
+// }
+
+
+
+
+.secondary_theme_button{
+    background-color: $secondary_theme_button_bg;
+    color: $white_color;
+    transition: all ease-in-out .3s;
+
+    &:hover{
+        background-color: $secondary_theme_button_bg_hover;
+    }
+}

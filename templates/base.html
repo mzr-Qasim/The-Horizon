@@ -1,1 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}The Horizon{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    {% block extra_css %}
+
+    {% endblock %}
+  </head>
+  <body>
+    <div class="site-wrapper"> 
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+        
+        {% include 'includes/footer.html' %}
+    </div>
+    {% block extra_js %}
+
+    {% endblock %}
+    <script src="{% static 'assets/js/bootstrap.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>
 
