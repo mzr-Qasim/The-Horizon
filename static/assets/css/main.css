@@ -12024,6 +12024,7 @@ figure,
 img,
 video,
 b,
+p,
 strong,
 small,
 .small,
@@ -12066,6 +12067,29 @@ body {
   margin-bottom: 7rem;
 }
 
+.lead {
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  padding-bottom: 1.5rem;
+}
+
+.section_heading h2, .section_heading .h2 {
+  font-size: clamp(2.5rem, 2vw, 3rem);
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.section_heading h2 small, .section_heading .h2 small, .section_heading h2 .small, .section_heading .h2 .small {
+  text-transform: uppercase;
+  padding-bottom: 1.2rem;
+  display: block;
+  color: rgb(151, 134, 103);
+  font-size: 0.8rem;
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+}
+
 .nav_animation i {
   display: inline-block;
   transition: all ease-in-out 0.3s;
@@ -12086,22 +12110,21 @@ body {
 
 .secondary_theme_button {
   background-color: rgb(151, 134, 103);
-  color: white;
+  color: rgb(255, 255, 255);
   transition: all ease-in-out 0.3s;
 }
 .secondary_theme_button:hover {
   background-color: rgb(75, 81, 77);
 }
 
-section.main_hero_section {
+section.video_section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section.main_hero_section video {
+section.video_section video {
   position: absolute;
   top: 0;
   left: 0;
@@ -12111,7 +12134,7 @@ section.main_hero_section video {
      object-fit: cover;
   z-index: 2;
 }
-section.main_hero_section:after {
+section.video_section:after {
   content: "";
   position: absolute;
   top: 0;
@@ -12121,24 +12144,30 @@ section.main_hero_section:after {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
-section.main_hero_section figcaption {
+section.video_section figcaption {
   z-index: 4;
-  color: white;
+  color: rgb(255, 255, 255);
 }
-section.main_hero_section figcaption h1, section.main_hero_section figcaption .h1 {
-  text-transform: uppercase;
+section.video_section figcaption h1, section.video_section figcaption .h1 {
   text-align: center;
   font-size: clamp(2rem, 3vw, 5rem);
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 700;
 }
-section.main_hero_section figcaption h1 span, section.main_hero_section figcaption .h1 span {
+section.video_section figcaption h1 span, section.video_section figcaption .h1 span {
   padding-bottom: 1.2rem;
   display: block;
   color: #ebd7b2;
   font-size: clamp(1rem, 2vw, 1rem);
   letter-spacing: 0.25rem;
   font-weight: 600;
+}
+
+section.main_hero_section {
+  min-height: 100vh !important;
+}
+section.main_hero_section figcaption h1, section.main_hero_section figcaption .h1 {
+  text-transform: uppercase;
 }
 section.main_hero_section .header {
   width: 100%;
@@ -12155,7 +12184,7 @@ section.main_hero_section .header .header-inner .links {
 }
 section.main_hero_section .header .header-inner .links .nav_btn i {
   font-size: 1.5rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 section.main_hero_section .header .header-inner .links .btn-close {
   --bs-btn-close-bg: none;
@@ -12182,6 +12211,33 @@ section.main_hero_section .header .header-inner .links .btn-close:hover i {
   flex-direction: column;
 }
 
+.about_us .col-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.about_us .col-inner figure {
+  aspect-ratio: 1/1.2;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about_us .col-inner figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.video_section {
+  min-height: 70vh;
+}
+section.video_section figcaption h1 span, section.video_section figcaption .h1 span {
+  text-transform: uppercase;
+}
+
 @media (max-width: 1100px) {
   .lg-hide {
     display: none;
@@ -12189,6 +12245,6 @@ section.main_hero_section .header .header-inner .links .btn-close:hover i {
 }
 @media (max-width: 768px) {
   section.main_hero_section {
-    min-height: 90vh;
+    min-height: 90vh !important;
   }
 }/*# sourceMappingURL=main.css.map */

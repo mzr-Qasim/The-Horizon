@@ -4,16 +4,56 @@
 {% block title %}Home | The Horizon{% endblock %}
 
 {% block content %}
-<section class="main_hero_section section_space">
+<section class="main_hero_section video_section section_space">
     {% include 'includes/header.html' %}
     <video autoplay muted loop playsinline>
         <source src="{% static 'assets/videos/main_hero.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <figcaption>
-            <div class="container">
-                <h1><span>luxury hotel experience</span>a unique experience<br>where to stay</h1>
-    </div><!-- /.container -->
+        <div class="container">
+            <h1><span>luxury hotel experience</span>a unique experience<br>where to stay</h1>
+        </div><!-- /.container -->
     </figcaption>
 </section><!-- /.main_hero_section -->
+<section class="about_us section_space">
+    <div class="container">
+        <div class="about_us_inner">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="col-inner">
+                        <div class="about_us_content">
+                            <div class="section_heading">
+                                <h2><small>about us</small>Tailored services and the experience of unique holidays</h2>
+                            </div><!-- /.section_heading -->
+                            <p class="lead">Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat
+                                dignissim.</p>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo.</p>
+                        </div><!-- /.about_us_content -->
+                    </div><!-- /.col-inner -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="col-inner">
+                        <figure>
+                            <img src="{% static './assets/images/about_us.jpg' %}" loading="lazy" alt="">
+                        </figure>
+                    </div><!-- /.col-inner -->
+                </div><!-- /.col-lg-5 -->
+            </div><!-- /.row -->
+        </div><!-- /.about_us_inner -->
+    </div><!-- /.container -->
+</section><!-- /.about_us -->
+<section class="video_section section_space">
+    <video autoplay muted loop playsinline>
+        <source src="{% static 'assets/videos/main_hero.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <figcaption>
+        <div class="container">
+            <h1><span>luxury hotel experience</span>Enjoy in a very<br>Immersive Relax</h1>
+        </div><!-- /.container -->
+    </figcaption>
+</section><!-- /.video_section -->
 {% endblock %}
