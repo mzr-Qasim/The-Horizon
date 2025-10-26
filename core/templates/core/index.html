@@ -19,8 +19,8 @@
 <section class="about_us section_space">
     <div class="container">
         <div class="about_us_inner">
-            <div class="row g-4">
-                <div class="col-lg-6">
+            <div class="row g-4 flex-column-reverse flex-lg-row">
+                <div class="col-lg-5">
                     <div class="col-inner">
                         <div class="about_us_content">
                             <div class="section_heading">
@@ -34,11 +34,16 @@
                         </div><!-- /.about_us_content -->
                     </div><!-- /.col-inner -->
                 </div><!-- /.col-lg-6 -->
-                <div class="col-lg-5 offset-lg-1">
+                <div class="col-lg-6 offset-lg-1">
                     <div class="col-inner">
-                        <figure>
-                            <img src="{% static './assets/images/about_us.jpg' %}" loading="lazy" alt="">
-                        </figure>
+                        <div class="images_overlap">
+                            <figure class="main_img">
+                                <img src="{% static './assets/images/about_us.jpg' %}" loading="lazy" alt="">
+                            </figure>
+                            <figure class="overlay_img">
+                                <img src="{% static './assets/images/about_us_overlay.jpg' %}" loading="lazy" alt="">
+                            </figure>
+                        </div><!-- /.images_overlap -->
                     </div><!-- /.col-inner -->
                 </div><!-- /.col-lg-5 -->
             </div><!-- /.row -->

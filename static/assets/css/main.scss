@@ -93,30 +93,59 @@ section.main_hero_section {
     .col-inner {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         height: 100%;
 
-        figure {
-            aspect-ratio: 1/1.2;
+        .images_overlap {
+            position: relative;
             width: 100%;
+            height: 100%;
+            min-height: 600px;
+
+
+        }
+
+        figure {
+            position: absolute;
+            width: 80%;
+            height: 100%;
             border-radius: 10px;
             overflow: hidden;
+        }
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+
+            
+        }
+
+        figure.main_img {
+                top: 0;
+                right: 0;
+
+        }
+        figure.overlay_img {
+                top: 50%;
+                left: 0; 
+                z-index: 1;
+                width: 50%;
+                height: 65%;
+                transform: translateY(-50%);
+                border: 4px solid #ebd7b2;
+                
+
 
         }
     }
 }
 
 
-
-
-section.video_section  { 
+section.video_section {
     min-height: 70vh;
 
     figcaption {

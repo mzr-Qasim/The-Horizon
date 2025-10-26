@@ -9,8 +9,14 @@
 @media(max-width: 992px) {
     .about_us {
         .col-inner {
+            .images_overlap {
+                min-height: 650px;
+
+
+            }
+
             figure {
-                aspect-ratio: 1/1;
+                height: 95%;
             }
         }
     }
@@ -21,5 +27,23 @@
 @media(max-width: 768px) {
     section.main_hero_section {
         min-height: 90vh;
+    }
+
+    .about_us {
+        .col-inner {
+            .images_overlap {
+                min-height: 500px;
+
+
+            }
+
+            figure.overlay_img {
+
+                height: 55%;
+
+
+
+            }
+        }
     }
 }
