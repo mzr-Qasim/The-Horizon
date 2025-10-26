@@ -4,7 +4,7 @@
 {% block title %}Home | The Horizon{% endblock %}
 
 {% block content %}
-<section class="main_hero_section video_section section_space">
+<section class="main_hero_section theme_section section_space">
     {% include 'includes/header.html' %}
     <video autoplay muted loop playsinline>
         <source src="{% static 'assets/videos/main_hero.mp4' %}" type="video/mp4">
@@ -45,9 +45,9 @@
         </div><!-- /.about_us_inner -->
     </div><!-- /.container -->
 </section><!-- /.about_us -->
-<section class="video_section section_space">
-    <video autoplay muted loop playsinline>
-        <source src="{% static 'assets/videos/main_hero.mp4' %}" type="video/mp4">
+<section id="booking_section" class="video_section theme_section section_space">
+    <video autoplay muted loop playsinline preload="none">
+        <source src="{% static 'assets/videos/video_section_home.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <figcaption>

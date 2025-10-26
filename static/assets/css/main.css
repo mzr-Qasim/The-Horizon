@@ -12117,14 +12117,14 @@ body {
   background-color: rgb(75, 81, 77);
 }
 
-section.video_section {
+section.theme_section {
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section.video_section video {
+section.theme_section video {
   position: absolute;
   top: 0;
   left: 0;
@@ -12134,7 +12134,7 @@ section.video_section video {
      object-fit: cover;
   z-index: 2;
 }
-section.video_section:after {
+section.theme_section:after {
   content: "";
   position: absolute;
   top: 0;
@@ -12144,17 +12144,17 @@ section.video_section:after {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
-section.video_section figcaption {
+section.theme_section figcaption {
   z-index: 4;
   color: rgb(255, 255, 255);
 }
-section.video_section figcaption h1, section.video_section figcaption .h1 {
+section.theme_section figcaption h1, section.theme_section figcaption .h1 {
   text-align: center;
   font-size: clamp(2rem, 3vw, 5rem);
   color: rgb(255, 255, 255);
   font-weight: 700;
 }
-section.video_section figcaption h1 span, section.video_section figcaption .h1 span {
+section.theme_section figcaption h1 span, section.theme_section figcaption .h1 span {
   padding-bottom: 1.2rem;
   display: block;
   color: #ebd7b2;
@@ -12164,7 +12164,7 @@ section.video_section figcaption h1 span, section.video_section figcaption .h1 s
 }
 
 section.main_hero_section {
-  min-height: 100vh !important;
+  min-height: 100vh;
 }
 section.main_hero_section figcaption h1, section.main_hero_section figcaption .h1 {
   text-transform: uppercase;
@@ -12243,8 +12243,13 @@ section.video_section figcaption h1 span, section.video_section figcaption .h1 s
     display: none;
   }
 }
+@media (max-width: 992px) {
+  .about_us .col-inner figure {
+    aspect-ratio: 1/1;
+  }
+}
 @media (max-width: 768px) {
   section.main_hero_section {
-    min-height: 90vh !important;
+    min-height: 90vh;
   }
 }/*# sourceMappingURL=main.css.map */
