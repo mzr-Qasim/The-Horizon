@@ -12082,12 +12082,12 @@ body {
 }
 .section_heading h2 small, .section_heading .h2 small, .section_heading h2 .small, .section_heading .h2 .small {
   text-transform: uppercase;
-  padding-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
   display: block;
-  color: rgb(151, 134, 103);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25rem;
-  font-weight: 700;
+  font-weight: 600;
+  color: #978667;
 }
 
 .nav_animation i {
