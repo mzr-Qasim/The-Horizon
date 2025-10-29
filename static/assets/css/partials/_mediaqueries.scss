@@ -1,3 +1,14 @@
+@media(max-width: 1200px) {
+    section.room_suites {
+        a {
+            .room_suites_main {
+                aspect-ratio: 1/.5;
+            }
+        }
+    }
+
+}
+
 @media(max-width: 1100px) {
     .lg-hide {
         display: none;
@@ -20,6 +31,14 @@
             }
         }
     }
+        section.room_suites {
+        a {
+            .room_suites_main {
+                aspect-ratio: 1/.8;
+            }
+        }
+    }
+
 
 }
 

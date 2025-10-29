@@ -121,23 +121,24 @@ section.main_hero_section {
             left: 0;
             object-fit: cover;
 
-            
+
         }
 
         figure.main_img {
-                top: 0;
-                right: 0;
+            top: 0;
+            right: 0;
 
         }
+
         figure.overlay_img {
-                top: 50%;
-                left: 0; 
-                z-index: 1;
-                width: 50%;
-                height: 65%;
-                transform: translateY(-50%);
-                border: 4px solid #ebd7b2;
-                
+            top: 50%;
+            left: 0;
+            z-index: 1;
+            width: 50%;
+            height: 65%;
+            transform: translateY(-50%);
+            border: 4px solid #ebd7b2;
+
 
 
         }
@@ -161,9 +162,134 @@ section.video_section {
 
 
 
+section.room_suites {
+    .col-inner {
+        height: 100%;
+    }
+
+    a {
+
+
+        figure {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1/.8;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all ease-in-out .3s;
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: -1.2rem;
+                left: 0;
+                padding-left: 2rem;
+                margin-top: 20rem;
+                color: $white_color;
+                transition: all ease-in-out .3s;
+                overflow: hidden;
+                z-index: 3;
+
+
+                h3 {
+                    text-transform: capitalize;
+                    font-size: clamp(1.5rem, 2vw, 1.6rem);
+                    font-weight: 600;
+                    padding-bottom: 1rem;
+
+                    small {
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: 45%;
+                        font-weight: 600;
+                        letter-spacing: 2px;
+
+                    }
+                }
+
+                small.link {
+                    opacity: 0;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    position: relative;
+                    padding-bottom: .5rem;
+                    overflow: hidden;
+                    display: inline-block;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: $white_color;
+                        bottom: 0;
+                        left: 0;
+                        transform: translateX(-100%);
+                        transition: all ease-in-out .5s;
+
+                    }
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                background: linear-gradient(transparent, rgb(0, 0, 0));
+                z-index: 2;
+                transition: all ease-in-out .3s;
+
+            }
+        }
+
+        &:hover {
+            figure {
+                img {
+                    transform: scale(1.1)
+                }
+
+                &::after {
+                    height: 70%;
+                }
+            }
+
+            figcaption {
+                transform: translateY(-50%);
 
 
 
+                small.link {
+                    opacity: 1;
+
+                    &::after {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+// All Rooms Page
+
+
+
+section.secondary_hero_section {
+    min-height: 70vh;
+}
 
 
 

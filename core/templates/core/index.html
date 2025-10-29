@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Home | The Horizon{% endblock %}
+{% block title %}Horizon - Hotel{% endblock %}
 
 {% block content %}
 <section class="main_hero_section theme_section section_space">
@@ -38,7 +38,7 @@
                     <div class="col-inner">
                         <div class="images_overlap">
                             <figure class="main_img">
-                                <img src="{% static './assets/images/about_us.jpg' %}" loading="lazy" alt="">
+                                <img src="{% static './assets/images/rooms_suites/home-1.jpg' %}" loading="lazy" alt="">
                             </figure>
                             <figure class="overlay_img">
                                 <img src="{% static './assets/images/about_us_overlay.jpg' %}" loading="lazy" alt="">
@@ -50,7 +50,7 @@
         </div><!-- /.about_us_inner -->
     </div><!-- /.container -->
 </section><!-- /.about_us -->
-<section id="booking_section" class="video_section theme_section section_space">
+<section class="video_section theme_section section_space">
     <video autoplay muted loop playsinline preload="none">
         <source src="{% static 'assets/videos/video_section_home.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
@@ -61,4 +61,55 @@
         </div><!-- /.container -->
     </figcaption>
 </section><!-- /.video_section -->
+<section id="booking_section" class="room_suites section_space">
+    <div class="container">
+        <div class="section_heading">
+            <h2><small>Luxury experience</small>Rooms & Suites</h2>
+        </div><!-- /.section_heading -->
+        <div class="row g-4">
+            <div class="col-lg-12 col-xl-6">
+                <div class="col-inner">
+                    <a href="">
+                        <figure class="room_suites_main">
+                            <img src="{% static './assets/images/rooms_suites/home-1.jpg' %}" loading="lazy" alt="">
+                            <figcaption>
+                                <h3><small>from $250/night</small>junior suite</h3>
+                                <small class="link">Read more</small>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div><!-- /.col-inner -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-6 col-xl-3">
+                <div class="col-inner">
+                    <a href="">
+                        <figure>
+                            <img src="{% static './assets/images/rooms_suites/home-2.jpg' %}" loading="lazy" alt="">
+                            <figcaption>
+                                <h3><small>from $190/night</small>deluxe room</h3>
+                                <small class="link">Read more</small>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div><!-- /.col-inner -->
+            </div><!-- /.col-lg-3 -->
+            <div class="col-lg-6 col-xl-3">
+                <div class="col-inner">
+                    <a href="">
+                        <figure>
+                            <img src="{% static './assets/images/rooms_suites/home-3.jpg' %}" loading="lazy" alt="">
+                            <figcaption>
+                                <h3><small>from $240/night</small>superior room</h3>
+                                <small class="link">Read more</small>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div><!-- /.col-inner -->
+            </div><!-- /.col-lg-3 -->
+        </div><!-- /.row -->
+        <div class="section_link mt-4 d-flex justify-content-end">
+            <a href="{% url 'all_rooms' %}" class="theme_btn main_theme_button">View all Rooms</a>
+        </div><!-- /.section_link -->
+    </div><!-- /.container -->
+</section><!-- /.room_suites -->
 {% endblock %}

@@ -12106,12 +12106,23 @@ body {
   border-radius: 2rem;
   padding: 0.6rem 1.5rem;
   font-weight: 600;
+  transition: all ease-in-out 0.3s;
+}
+
+.main_theme_button {
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #333;
+}
+.main_theme_button:hover {
+  background-color: #333;
+  color: rgb(255, 255, 255);
 }
 
 .secondary_theme_button {
   background-color: rgb(151, 134, 103);
   color: rgb(255, 255, 255);
-  transition: all ease-in-out 0.3s;
+  text-transform: capitalize;
 }
 .secondary_theme_button:hover {
   background-color: rgb(75, 81, 77);
@@ -12124,7 +12135,7 @@ section.theme_section {
   align-items: center;
   justify-content: center;
 }
-section.theme_section video {
+section.theme_section video, section.theme_section .main_hero_img {
   position: absolute;
   top: 0;
   left: 0;
@@ -12260,6 +12271,105 @@ section.video_section figcaption h1 span, section.video_section figcaption .h1 s
   text-transform: uppercase;
 }
 
+section.room_suites .col-inner {
+  height: 100%;
+}
+section.room_suites a figure {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/0.8;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+section.room_suites a figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all ease-in-out 0.3s;
+}
+section.room_suites a figure figcaption {
+  position: absolute;
+  bottom: -1.2rem;
+  left: 0;
+  padding-left: 2rem;
+  margin-top: 20rem;
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out 0.3s;
+  overflow: hidden;
+  z-index: 3;
+}
+section.room_suites a figure figcaption h3, section.room_suites a figure figcaption .h3 {
+  text-transform: capitalize;
+  font-size: clamp(1.5rem, 2vw, 1.6rem);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+section.room_suites a figure figcaption h3 small, section.room_suites a figure figcaption .h3 small, section.room_suites a figure figcaption h3 .small, section.room_suites a figure figcaption .h3 .small {
+  display: block;
+  text-transform: uppercase;
+  font-size: 45%;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+section.room_suites a figure figcaption small.link, section.room_suites a figure figcaption .link.small {
+  opacity: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+  display: inline-block;
+}
+section.room_suites a figure figcaption small.link::after, section.room_suites a figure figcaption .link.small::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all ease-in-out 0.5s;
+}
+section.room_suites a figure::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(transparent, rgb(0, 0, 0));
+  z-index: 2;
+  transition: all ease-in-out 0.3s;
+}
+section.room_suites a:hover figure img {
+  transform: scale(1.1);
+}
+section.room_suites a:hover figure::after {
+  height: 70%;
+}
+section.room_suites a:hover figcaption {
+  transform: translateY(-50%);
+}
+section.room_suites a:hover figcaption small.link, section.room_suites a:hover figcaption .link.small {
+  opacity: 1;
+}
+section.room_suites a:hover figcaption small.link::after, section.room_suites a:hover figcaption .link.small::after {
+  transform: translateX(0);
+}
+
+section.secondary_hero_section {
+  min-height: 70vh;
+}
+
+@media (max-width: 1200px) {
+  section.room_suites a .room_suites_main {
+    aspect-ratio: 1/0.5;
+  }
+}
 @media (max-width: 1100px) {
   .lg-hide {
     display: none;
@@ -12271,6 +12381,9 @@ section.video_section figcaption h1 span, section.video_section figcaption .h1 s
   }
   .about_us .col-inner figure {
     height: 95%;
+  }
+  section.room_suites a .room_suites_main {
+    aspect-ratio: 1/0.8;
   }
 }
 @media (max-width: 768px) {

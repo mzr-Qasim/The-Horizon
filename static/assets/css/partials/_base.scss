@@ -1,5 +1,6 @@
 $white_color: rgba(255, 255, 255, 1); 
 $black_color: rgba(0, 0, 0, 1);
+$theme_black: #333;
 $secondary_theme_button_bg: rgb(151, 134, 103);
 $secondary_theme_button_bg_hover: rgb(75, 81, 77);
 
@@ -55,6 +56,8 @@ body {
     align-items: center;
 }
 
+
+
 .section_space {
     margin-bottom: 7rem;
 }
@@ -69,7 +72,7 @@ body {
 .section_heading {
     h2 {
             font-size: clamp(2.3rem, 2vw, 3rem);
-            color: #333;
+            color: $theme_black;
             font-weight: 700;
             padding-bottom: 1rem;
 
@@ -108,13 +111,21 @@ body {
     border-radius: 2rem;
     padding: .6rem 1.5rem;
     font-weight: 600;
+    transition: all ease-in-out .3s;
 }
 
 
 
-// .main_theme_button_{
+.main_theme_button{
+    background-color: transparent;
+    color: $theme_black;
+    border: 2px solid $theme_black;
 
-// }
+    &:hover{
+        background-color: $theme_black;
+        color: $white_color;
+    }
+}
 
 
 
@@ -122,12 +133,15 @@ body {
 .secondary_theme_button {
     background-color: $secondary_theme_button_bg;
     color: $white_color;
-    transition: all ease-in-out .3s;
+    text-transform: capitalize;
 
     &:hover {
         background-color: $secondary_theme_button_bg_hover;
     }
 }
+
+
+
 
 
 
@@ -138,7 +152,7 @@ section.theme_section {
     align-items: center;
     justify-content: center;
 
-    video {
+    video, .main_hero_img {
         position: absolute;
         top: 0;
         left: 0;

@@ -23,6 +23,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),  # Homepage handled by core app
+    path('all_rooms/', include('rooms.urls')),  # Homepage handled by core app
 ]
 
 

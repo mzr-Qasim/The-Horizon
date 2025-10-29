@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Horizon - Hotel{% endblock %}
+
+{% block content %}
+<section class="main_hero_section secondary_hero_section theme_section section_space">
+    {% include 'includes/header.html' %}
+        <img class="main_hero_img" src="{% static 'assets/images/rooms_suites/home-3.jpg' %}" alt="">
+    <figcaption>
+        <div class="container">
+            <h1><span>luxury hotel experience</span>Our Rooms & Suites</h1>
+        </div><!-- /.container -->
+    </figcaption>
+</section><!-- /.main_hero_section -->
+{% endblock %}
