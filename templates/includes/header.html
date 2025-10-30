@@ -2,7 +2,8 @@
 <header class="header">
     <div class="container">
         <div class="header-inner d_flex_between">
-            <a href="{% url 'home' %}"><img class="site_logo" src="{% static './assets/images/main-logo.svg' %}" alt=""></a>
+            <a href="{% url 'home' %}"><img class="site_logo" src="{% static './assets/images/main-logo.svg' %}"
+                    alt=""></a>
             <div class="links d_flex_center">
                 <a href="#booking_section" class="lg-hide theme_btn secondary_theme_button">book now</a>
                 <button class="nav_btn nav_animation" type="button" data-bs-toggle="offcanvas"
@@ -19,7 +20,14 @@
                         </div><!-- /.navbar-logo -->
                     </div>
                     <div class="offcanvas-body">
-
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'all_rooms' %}">Rooms & suites</a></li>
+                            <li><a href="">Booking</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Login</a></li>
+                        </ul>
                     </div>
                 </div>
             </div><!-- /.links -->

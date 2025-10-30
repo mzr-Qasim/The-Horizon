@@ -12215,6 +12215,25 @@ section.main_hero_section .header .header-inner .links .btn-close:focus {
 section.main_hero_section .header .header-inner .links .btn-close:hover i {
   transform: rotate(90deg);
 }
+section.main_hero_section .header .header-inner .offcanvas-body {
+  margin-top: 1.5rem;
+}
+section.main_hero_section .header .header-inner .offcanvas-body ul {
+  margin-left: 2rem;
+}
+section.main_hero_section .header .header-inner .offcanvas-body ul li a {
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all ease-in-out 0.3s;
+}
+section.main_hero_section .header .header-inner .offcanvas-body ul li a:hover {
+  color: rgb(151, 134, 103);
+}
+section.main_hero_section .header .header-inner .offcanvas-body ul li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 
 .offcanvas .offcanvas-header {
   background-color: #faf8f5;
